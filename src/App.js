@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import localStorageService from './localStorageService';
 
 function App() {
+  //localStorageService.setSession({ access_token: "Sample Access Token", refresh_token: "Sample Refresh Token", email: "test@gamil.com" });
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React {localStorageService.getEmail()}
         </a>
       </header>
     </div>
